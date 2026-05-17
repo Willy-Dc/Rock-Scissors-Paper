@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+.result {
+  color: white;
+  font-size: 50px;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px black;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  margin: 5em 0;
+}
+
+.player {
+  background-color: rgb(219, 238, 255);
+  width: 150px;
+  height: 150px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  box-shadow: 0 0 30px blue;
+}
+
+.computer {
+  background-color: rgb(255, 207, 207);
+  width: 150px;
+  height: 150px;
+  border: 2px solid red;
+  border-radius: 50%;
+  box-shadow: 0 0 30px red;
+}
+
+.choose {
+  border: 1px solid yellow;
+  box-shadow: 0 0 30px yellow;
+  width: 700px;
+  height: 300px;
+  margin: 5em auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+img {
+  width: 200px;
+  background-color: rgb(255, 255, 186);
+  border-radius: 50%;
+  box-shadow: 0 0 20px yellow;
+}
+
+.rock,
+.scissors,
+.paper {
+  background-size: contain;
+  transition: .3s ease;
+  background-repeat: no-repeat;
+}
+
+.choose .rock:hover, 
+.choose .scissors:hover, 
+.choose .paper:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.choose .rock:active, 
+.choose .scissors:active, 
+.choose .paper:active {
+  transform: scale(.95);
+}
+
+.rock {
+  background-image: url(img/rock.png);
+}
+
+.scissors {
+  background-image: url(img/scissors.png);
+}
+
+.paper {
+  background-image: url(img/paper.png);
+}
+
+@media screen and (max-width: 700px) {
+  .choose {
+    width: calc(90vw - 50px);
+  }
+
+  .display {
+    gap: 2em;
+  }
+
+  img {
+    width: 90%;
+    translate: 5px 0;
+  }
+
+  .player,
+  .computer {
+    width: 120px;
+    height: 120px;
+  }  
+}
